@@ -1,0 +1,57 @@
+﻿<Window x:Class="JokeAndPunchLineG4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JokeAndPunchLineG4"
+        mc:Ignorable="d"
+        Title="Joke and Punch Line" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button 
+            x:Name="Setup"
+            Margin="5"
+            Content="Setup" 
+            Grid.Row="1"
+            Grid.Column="0"
+            Background="#2a475e"
+            FontSize="50"
+            Foreground="White"
+            Click="Setup_Click"
+            >
+        </Button>
+        <Button 
+            x:Name="PunchLine"
+            Margin="5"
+            Content="Punchline" 
+            Grid.Row="1"
+            Grid.Column="1"
+            Background="#2a475e"
+            FontSize="50"
+            Foreground="White"
+            Click="PunchLine_Click"
+            >
+        </Button>
+        <Label
+            Name="DisplayLabel"
+            Grid.ColumnSpan="2"
+            Margin="5"
+            Foreground="White"
+            Background="Gray"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            FontSize="30"
+            FontStyle="Italic"
+            >
+            <TextBox x:Name="LabelText" TextWrapping="Wrap" Background="Gray" Foreground="White" BorderBrush="Gray">
+            </TextBox>
+        </Label>
+    </Grid>
+</Window>
